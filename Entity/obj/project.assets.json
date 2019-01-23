@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\Entity\\Entity.csproj",
+      "projectUniqueName": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\Entity\\Entity.csproj",
+      "projectPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\Entity\\Entity.csproj",
       "packagesPath": "C:\\Users\\ebru.kolak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\Entity\\obj\\",
+      "outputPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

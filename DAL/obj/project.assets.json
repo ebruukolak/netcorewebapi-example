@@ -684,6 +684,16 @@
         "runtime": {
           "lib/netstandard2.0/_._": {}
         }
+      },
+      "Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entity.dll": {}
+        }
       }
     }
   },
@@ -2820,12 +2830,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Entity/1.0.0": {
+      "type": "project",
+      "path": "../Entity/Entity.csproj",
+      "msbuildProject": "../Entity/Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Entity >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
-      "NpgSql.EntityFrameworkCore.PostgreSQL.Design",
+      "NpgSql.EntityFrameworkCore.PostgreSQL.Design >= 1.1.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 2.1.0"
     ]
   },
@@ -2836,11 +2852,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\ebru.kolak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2858,7 +2874,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\Entity\\Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -2878,7 +2898,7 @@
           },
           "NpgSql.EntityFrameworkCore.PostgreSQL.Design": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[1.1.1, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",

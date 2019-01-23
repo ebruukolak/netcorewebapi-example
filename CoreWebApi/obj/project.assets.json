@@ -12078,11 +12078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\CoreWebApi\\CoreWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\CoreWebApi\\CoreWebApi.csproj",
       "projectName": "CoreWebApi",
-      "projectPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\CoreWebApi\\CoreWebApi.csproj",
+      "projectPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\CoreWebApi\\CoreWebApi.csproj",
       "packagesPath": "C:\\Users\\ebru.kolak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApi\\CoreWebApi\\obj\\",
+      "outputPath": "C:\\Users\\ebru.kolak\\Desktop\\WebApiii\\CoreWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
