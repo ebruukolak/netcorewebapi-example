@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL.Abstract;
+using DAL.Concrete;
+using Manager.Abstract;
+using Manager.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +30,14 @@ namespace CoreWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddEntityFrameworkNpgsql().AddDbContext<EFContext>().BuildServiceProvider();
+            services.AddScoped<IProductManager,ProductManager>();
+            services.AddScoped<IProductDAL,ProductDAL>();
+            services.AddScoped<ICategoryManager,CategoryManager>();
+            services.AddScoped<ICategoryDAL,CategoryDAL>();
+            services.AddScoped<ISupplierManager,SupplierManager>();
+              
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

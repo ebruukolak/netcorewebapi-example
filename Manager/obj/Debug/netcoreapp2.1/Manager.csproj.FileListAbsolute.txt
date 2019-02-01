@@ -1,0 +1,16 @@
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\Manager.deps.json
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\Manager.dll
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\Manager.pdb
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\obj\Debug\netcoreapp2.1\Manager.csprojAssemblyReference.cache
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\obj\Debug\netcoreapp2.1\Manager.csproj.CoreCompileInputs.cache
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\obj\Debug\netcoreapp2.1\Manager.AssemblyInfoInputs.cache
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\obj\Debug\netcoreapp2.1\Manager.AssemblyInfo.cs
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\obj\Debug\netcoreapp2.1\Manager.dll
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\obj\Debug\netcoreapp2.1\Manager.pdb
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\Commons.dll
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\DAL.dll
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\Entity.dll
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\Entity.pdb
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\DAL.pdb
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\bin\Debug\netcoreapp2.1\Commons.pdb
+C:\Users\ebru.kolak\Desktop\WebApiii\Manager\obj\Debug\netcoreapp2.1\Manager.csproj.CopyComplete

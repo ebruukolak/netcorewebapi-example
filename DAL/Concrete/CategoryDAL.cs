@@ -1,8 +1,10 @@
+using Commons.DataAccess.Repository;
 using DAL.Abstract;
+using Entity;
 
 namespace DAL.Concrete
 {
-    public interface CategoryDAL:ICategoryDAL
+    public class CategoryDAL:RepositoryAccess<Categories,EFContext>,ICategoryDAL
     {
          
     }

@@ -1,0 +1,9 @@
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\obj\Debug\netcoreapp2.1\Commons.csprojAssemblyReference.cache
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\obj\Debug\netcoreapp2.1\Commons.csproj.CoreCompileInputs.cache
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\obj\Debug\netcoreapp2.1\Commons.AssemblyInfoInputs.cache
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\obj\Debug\netcoreapp2.1\Commons.AssemblyInfo.cs
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\bin\Debug\netcoreapp2.1\Commons.deps.json
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\bin\Debug\netcoreapp2.1\Commons.dll
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\bin\Debug\netcoreapp2.1\Commons.pdb
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\obj\Debug\netcoreapp2.1\Commons.dll
+C:\Users\ebru.kolak\Desktop\WebApiii\Commons\obj\Debug\netcoreapp2.1\Commons.pdb

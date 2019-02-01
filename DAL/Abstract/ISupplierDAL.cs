@@ -1,6 +1,9 @@
+using Commons;
+using Entity;
+
 namespace DAL.Abstract
 {
-    public interface ISupplierDAL
+    public interface ISupplierDAL:IRepositoryAccess<Suppliers>
     {
          
     }

@@ -1,6 +1,9 @@
+using Commons;
+using Entity;
+
 namespace DAL.Abstract
 {
-    public interface IProductDAL
+    public interface IProductDAL:IRepositoryAccess<Products>
     {
          
     }
