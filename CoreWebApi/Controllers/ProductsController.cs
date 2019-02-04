@@ -76,8 +76,6 @@ namespace CoreWebApi.Controllers
                   productManager.Delete(products);
                   return StatusCode(200);
               }              
-
         }
-
     }
 }

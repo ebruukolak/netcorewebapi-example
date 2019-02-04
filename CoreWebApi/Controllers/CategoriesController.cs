@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreWebApi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CategoriesController:ControllerBase
     {
         ICategoryManager categoryManager;

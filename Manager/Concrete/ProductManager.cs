@@ -49,6 +49,8 @@ namespace Manager.Concrete
             var products=GetByID(product.product_id);
             if(products!=null)
                productDAL.Delete(product);
+            else 
+               throw new Exception("There is no product.");
            
         }
 
