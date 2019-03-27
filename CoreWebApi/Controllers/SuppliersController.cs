@@ -17,6 +17,7 @@ namespace CoreWebApi.Controllers
         }
 
         [HttpGet("{supplierID}")]
+        [Route("GetSupplierByID")]
         public ActionResult GetSupplierByID(int supplierID)
         {
            if(supplierID==0)
@@ -30,6 +31,7 @@ namespace CoreWebApi.Controllers
         }
 
         [HttpGet]
+        [Route("GetSupplierList")]
         public ActionResult GetSupplierList()
         {
             var suppliers=supplierManager.GetListSupplier();

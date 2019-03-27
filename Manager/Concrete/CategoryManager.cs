@@ -23,7 +23,7 @@ namespace Manager.Concrete
            }
            return category;
         }
-        public List<Categories> GetList()
+        public List<Categories> GetCategoryList()
         {
             return categoryDAL.GetList();
         }

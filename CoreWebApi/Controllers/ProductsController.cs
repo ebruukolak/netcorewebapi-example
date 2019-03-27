@@ -18,6 +18,7 @@ namespace CoreWebApi.Controllers
         }
 
        [HttpGet]
+       [Route("GetProductsList")]
         public ActionResult GetProductsList()
         {
            var product =productManager.GetProductList();
@@ -28,6 +29,7 @@ namespace CoreWebApi.Controllers
         }
 
          [HttpGet("{productID}")]
+         [Route("GetProductByID")]
         public ActionResult GetProductByID(int productID)
         {
            if(productID>0)

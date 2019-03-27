@@ -14,16 +14,18 @@ namespace CoreWebApi.Controllers
             categoryManager=manager;
         }
         [HttpGet]
+        [Route("GetCategoriesList")]
         public ActionResult GetCategoriesList()
         {
-           var product =categoryManager.GetList();
-           if(product.Count>0){
-               return Ok(product);
+           var category =categoryManager.GetCategoryList();
+           if(category.Count>0){
+               return Ok(category);
            }
            return BadRequest();
         }
 
          [HttpGet("{categoryID}")]
+         [Route("GetCategoryByID")]
         public ActionResult GetCategoryByID(int categoryID)
         {
            if(categoryID>0)
