@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using Entity;
 using Manager.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreWebApi.Controllers
 {
+    [Authorize]   
     [Route("api/[controller]")]
     [ApiController]
     public class SuppliersController:ControllerBase
     {
         ISupplierManager supplierManager;
-
         public SuppliersController(ISupplierManager manager)
         {
             supplierManager=manager;
@@ -26,7 +27,7 @@ namespace CoreWebApi.Controllers
            }
            else
            {
-              return    Ok(supplierManager.GetByID(supplierID));
+              return Ok(supplierManager.GetByID(supplierID));
            }
         }
 

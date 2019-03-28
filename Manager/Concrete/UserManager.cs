@@ -38,8 +38,6 @@ namespace Manager.Concrete
         {
             return userDAL.GetList();
         }
-
-
         public void Add(Users u, string password)
         {
             if(string.IsNullOrWhiteSpace(password))
@@ -64,7 +62,9 @@ namespace Manager.Concrete
             if(user==null)
               throw new CustomException("User not found!");
            
-           //TODO bakılacak
+            user.FirstName = u.FirstName;
+            user.LastName = u.LastName;
+            user.UserName = u.UserName;
             
             if(!string.IsNullOrWhiteSpace(password))
             {
@@ -72,11 +72,11 @@ namespace Manager.Concrete
                CreatePaswordHash(password,out passwordHash,out passwordSalt);
                if(passwordHash !=null && passwordSalt!=null)
                {
-                 u.PasswordHash=passwordHash;
-                 u.PasswordSalt=passwordSalt;
-               }
-             
+                 user.PasswordHash=passwordHash;
+                 user.PasswordSalt=passwordSalt;
+               }             
             }
+            
             userDAL.Update(u);             
         }
 
@@ -88,7 +88,7 @@ namespace Manager.Concrete
                userDAL.Delete(user);
             }
         }    
-
+    #region PrivateMethods
         private static void CreatePaswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             using (var hmac= new HMACSHA512())
@@ -116,5 +116,7 @@ namespace Manager.Concrete
             }
             return true;
         }
+    #endregion
     }
+    
 }

@@ -1,11 +1,13 @@
 using Entity;
 using Manager.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 
 namespace CoreWebApi.Controllers
 {
+    [Authorize]  
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController:ControllerBase

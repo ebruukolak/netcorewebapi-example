@@ -15,8 +15,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CoreWebApi.Controllers
 {
-    //[Authorize]
-    
+    [Authorize]    
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController:ControllerBase
@@ -29,6 +28,22 @@ namespace CoreWebApi.Controllers
             usermanager=_usermanager;
             mapper=_mapper;
             appSettings=_appSettings.Value;
+        }
+
+        [HttpGet]
+        public IActionResult GetUserList()
+        {
+          var users=usermanager.GetUserList();
+          var userDTOs= mapper.Map<UserDTO>(users);
+          return Ok(userDTOs);
+        }
+
+        [HttpGet("{ID}")]
+        public IActionResult GetUserByID(int ID)
+        {
+          var user=usermanager.GetByID(ID);
+          var userDTO= mapper.Map<UserDTO>(user);
+          return Ok(userDTO);
         }
 
         [AllowAnonymous]
@@ -52,11 +67,12 @@ namespace CoreWebApi.Controllers
              var token=tokenHandler.CreateToken(tokenDescriptor);
              var tokenString=tokenHandler.WriteToken(token);
 
-             return Ok(new{
-                    ID=user.ID,
-                    Username = user.UserName,
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
+             return Ok(
+                 new{
+                    // ID=user.ID,
+                    // Username = user.UserName,
+                    // FirstName = user.FirstName,
+                    // LastName = user.LastName,
                     Token = tokenString
              }) ;
         }
@@ -77,6 +93,29 @@ namespace CoreWebApi.Controllers
                 
                 return BadRequest(new { message = ex.Message });
             }
+        }
+        
+        [HttpPut("Update/{ID}")]
+        public IActionResult Update(int ID,[FromBody] UserDTO userDTO)
+        {
+            try
+            {
+                var user= mapper.Map<Users>(userDTO);
+                user.ID=ID;
+                usermanager.Update(user,userDTO.Password);
+
+                return Ok();
+            }
+            catch (CustomException ex)
+            {                
+               return BadRequest(new { message = ex.Message });
+            }          
+        }
+        [HttpDelete("{ID}")]
+        public IActionResult Delete(int ID)
+        {
+            usermanager.Delete(ID);
+            return Ok();
         }
 
     }

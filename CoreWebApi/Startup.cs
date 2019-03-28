@@ -106,9 +106,10 @@ namespace CoreWebApi
                            .AllowAnyMethod()
                            .AllowAnyHeader()
                       );
-
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
+            
         }
     }
 }
