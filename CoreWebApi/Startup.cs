@@ -19,6 +19,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CoreWebApi
 {
@@ -34,7 +35,6 @@ namespace CoreWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         { 
-            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddEntityFrameworkNpgsql().AddDbContext<EFContext>().BuildServiceProvider();
 
@@ -47,8 +47,28 @@ namespace CoreWebApi
             services.AddScoped<ICategoryDAL,CategoryDAL>();
             services.AddScoped<ISupplierManager,SupplierManager>();
             services.AddScoped<ISupplierDAL,SupplierDAL>();
+
             services.AddScoped<IUserManager,UserManager>();
             services.AddScoped<IUserDAL,UserDAL>();   
+            services.AddScoped<TokenFilter>();
+            
+           services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("CoreSwagger", new Info
+                {
+                    Title = "Swagger on ASP.NET Core",
+                    Version = "4.0.1",
+                    Description = "Try Swagger on (ASP.NET Core 2.1)"
+                });
+                 c.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    In = "header",
+                    Type = "apiKey"
+                });
+            });
+            
             
             var appSettingsSection=Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -101,11 +121,13 @@ namespace CoreWebApi
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
-            }
-           app.UseCors(x=>x.AllowAnyOrigin()
-                           .AllowAnyMethod()
-                           .AllowAnyHeader()
-                      );
+            }       
+          app.UseSwagger()
+             .UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/CoreSwagger/swagger.json", "Swagger Test .Net Core");
+                });
+        
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();

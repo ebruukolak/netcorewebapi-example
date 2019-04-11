@@ -17,8 +17,7 @@ namespace CoreWebApi.Controllers
             supplierManager=manager;
         }
 
-        [HttpGet("{supplierID}")]
-        [Route("GetSupplierByID")]
+        [HttpGet("GetSupplierByID/{supplierID}")]        
         public ActionResult GetSupplierByID(int supplierID)
         {
            if(supplierID==0)

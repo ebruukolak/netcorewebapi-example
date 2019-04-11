@@ -1,3 +1,4 @@
+using CoreWebApi.Helpers;
 using Entity;
 using Manager.Abstract;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreWebApi.Controllers
 {
-    [Authorize]  
+    [ServiceFilter(typeof(TokenFilter))]    
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController:ControllerBase
@@ -30,8 +31,7 @@ namespace CoreWebApi.Controllers
            return BadRequest();
         }
 
-         [HttpGet("{productID}")]
-         [Route("GetProductByID")]
+         [HttpGet("GetProductByID/{productID}")]      
         public ActionResult GetProductByID(int productID)
         {
            if(productID>0)

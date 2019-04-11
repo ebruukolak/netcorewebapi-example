@@ -77,7 +77,7 @@ namespace Manager.Concrete
                }             
             }
             
-            userDAL.Update(u);             
+            userDAL.Update(user);             
         }
 
         public void Delete(int ID)

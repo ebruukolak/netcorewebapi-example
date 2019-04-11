@@ -26,8 +26,7 @@ namespace CoreWebApi.Controllers
            return BadRequest();
         }
 
-         [HttpGet("{categoryID}")]
-         [Route("GetCategoryByID")]
+         [HttpGet("GetCategoryByID/{categoryID}")]     
         public ActionResult GetCategoryByID(int categoryID)
         {
            if(categoryID>0)
