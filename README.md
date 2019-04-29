@@ -1,6 +1,6 @@
-Basic CRUD Operations with .Net Core Web API and EF core.
-Not finished yet..
-
+CRUD Operations with .Net Core Web API and EF Core.
+For database operations, PostgreSQL is used. 
+For authorization, Json Web Token is used.
 
 
 Resources:
